@@ -1,0 +1,30 @@
+#carrito {
+    list-style: none;
+    padding: 0;
+}
+
+#carrito li {
+    margin-bottom: 10px;
+}
+
+#carrito li button {
+    margin-left: 10px;
+}
+
+.cantidad-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.cantidad-buttons button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cantidad-label {
+    margin-right: 5px;
+}
