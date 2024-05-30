@@ -41,34 +41,44 @@ function mostrarCarrito() {
         const detalleProducto = document.createElement('div');
         detalleProducto.classList.add('producto');
 
+        // Primer div con la imagen
+        const divImagen = document.createElement('div');
+        divImagen.classList.add('imagen-container');
         const imagenProducto = document.createElement('img');
         imagenProducto.src = producto.imagen;
         imagenProducto.alt = producto.nombre;
-        detalleProducto.appendChild(imagenProducto);
+        divImagen.appendChild(imagenProducto);
+        detalleProducto.appendChild(divImagen);
 
+        // Segundo div con la información
+        const divInformacion = document.createElement('div');
+        divInformacion.classList.add('informacion-container');
+        
         const nombreProducto = document.createElement('span');
         nombreProducto.textContent = producto.nombre;
-        detalleProducto.appendChild(nombreProducto);
+        divInformacion.appendChild(nombreProducto);
 
         const cantidadProducto = document.createElement('span');
         cantidadProducto.textContent = `Cantidad: ${producto.cantidad}`;
-        detalleProducto.appendChild(cantidadProducto);
+        divInformacion.appendChild(cantidadProducto);
 
         const precioProducto = document.createElement('span');
         precioProducto.textContent = `Precio total: $${producto.precio * producto.cantidad}`;
-        detalleProducto.appendChild(precioProducto);
+        divInformacion.appendChild(precioProducto);
 
         const botonAumentar = document.createElement('button');
         botonAumentar.textContent = '+';
         botonAumentar.classList.add('aumentar');
         botonAumentar.addEventListener('click', () => aumentarCantidad(producto));
-        detalleProducto.appendChild(botonAumentar);
+        divInformacion.appendChild(botonAumentar);
 
         const botonReducir = document.createElement('button');
         botonReducir.textContent = '-';
         botonReducir.classList.add('reducir');
         botonReducir.addEventListener('click', () => reducirCantidad(producto));
-        detalleProducto.appendChild(botonReducir);
+        divInformacion.appendChild(botonReducir);
+
+        detalleProducto.appendChild(divInformacion);
 
         detallesCarritoElemento.appendChild(detalleProducto);
     });

@@ -28,3 +28,53 @@
 .cantidad-label {
     margin-right: 5px;
 }
+
+.producto {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-bottom: 10px;
+}
+
+.imagen-container {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.imagen-container img {
+    max-width: 500px;
+}
+
+.informacion-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    margin-top: 5px;
+}
+.pagarboton {
+    background-color: #4CAF50; /* Color de fondo verde */
+    border: none; /* Sin borde */
+    color: white; /* Texto blanco */
+    padding: 15px 30px; /* Espaciado interno más grande */
+    text-align: center; /* Texto centrado */
+    text-decoration: none; /* Sin decoración de texto */
+    display: inline-block; /* Mostrar como bloque */
+    font-size: 20px; /* Tamaño de fuente más grande */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    align-items: center;
+}
+
+.pagarboton:hover {
+    background-color: #45a049; /* Cambio de color al pasar el mouse */
+}
+
+.content-buton {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
